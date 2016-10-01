@@ -75,20 +75,20 @@ Add middleware to the server to show that a request has been sent to our API
 `router.route('/model')` define the route
 `.post(function(req, res){...` create an instance of the model in the function and set the request body to the key defined in the Schema
 
-  `var model = new Model();`
-  `model.name = req.body.name;`
+`var model = new Model();`
+`model.name = req.body.name;`
 
-  then save the instance
+then save the instance
 
-  `model.save(function(err){...`
+`model.save(function(err){...`
 
-    add a function to return the error
-    `if (err) res.send(err);`
+add a function to return the error
+`if (err) res.send(err);`
 
-    else return a message in json that the instance was saved
+else return a message in json that the instance was saved
 
-    `res.json({ message: created});`
+`res.json({ message: created});`
 
-    `});`
+`});`
 
-    `});`
+`});`
