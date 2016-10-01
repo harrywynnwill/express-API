@@ -1,5 +1,9 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
@@ -8,53 +12,38 @@ var github = require('./app/models/github');
 
 
 var router = express.Router();
-var options = {
-  url: "https://api.github.com/users/harrywynnwill",
-  headers: {
-    'User-Agent': 'request'
-  }
-};
 
-
-
-var request = require('request');
-
-
-
-
-router.use(function(req, res, next) {
-    // do logging
-    console.log('Something is happening.');
-    next(); // make sure we go to the next routes and don't stop here
-});
-
-function getGitHub() {
-
-  request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      return body;
-      console.log(body)
-    }
-  })
-};
-
+router.use(function(req, res, next){
+  console.log('something is happening');
+  next();
+})
 
 router.get('/', function(req, res) {
 
-
-
-
+  res.json({ message: 'hooray! welcome to our api!' });
 
 });
 
 app.use('/api', router);
 
-
 app.listen(port);
 console.log('Magic happens on port ' + port);
 
+var mongoose = require('mongoose');
 
+var Car = require('./app/models/car');
 
-function _handleResponseFromApi (response) {
-  return response.data;
-}
+mongoose.connect('mongodb://localhost:27017/db_name'); // connect to our database
+
+router.route('/cars')
+  .post(function(req, res){
+    var car = new Car();
+    car.name =  req.body.name;
+
+    car.save(function(err){
+      if (err)
+        res.send(err);
+
+        res.json({message: 'Car created!'});
+    })
+  });
