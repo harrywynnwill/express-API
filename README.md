@@ -27,7 +27,8 @@ Learning Express.js
     "dependencies": {
         "express": "~4.0.0",
         "mongoose": "~3.6.13",
-        "body-parser": "~1.0.1"
+        "body-parser": "~1.0.1",
+        "mongodb": "^2.2.10",
     }
 }
 ```
@@ -37,6 +38,8 @@ Learning Express.js
 `mongoose` is the ORM to communicate with MongoDB
 
 `body-parser` will let us post with HTTP request
+
+`mongodb` is the databaseg
 
 ```
 "devDependencies": {
