@@ -1,8 +1,24 @@
+
+
+
 #Express api
+
+
 
 Learning Express.js
 
-#1 Define node packages
+####Installation instructions
+`$ git clone git@github.com:harrywynnwill/express-API.git`
+
+`$ cd express-API`
+
+`$ npm install`
+
+`$ nodemon ./server.js localhost 8080`
+
+###NOTES
+
+#####1 Define node packages
 
 ```
 {
@@ -30,11 +46,11 @@ Learning Express.js
 
 `nodemon` allows us to make changes to the app while server is running.
 
-#2 Install the dependencies
+#####2 Install the dependencies
 
 `$ npm install`
 
-#3 setting up the server
+#####3 setting up the server
 see `server.js`
 
 The base setup - pull in the various packages define our express app
@@ -43,23 +59,23 @@ Route setup - need an instance of router to define routes for the api
 
 finally the app listens to the port then our app is live.
 
-#4 start the server
+#####4 start the server
 `nodemon ./server.js localhost 8080` start the server
 
 visit the address in a browser.
 
-#5 setup account with modulus.io
+#####5 setup account with modulus.io
 
 setup an account with modulus.io and create a db
 
-#5b setup mongoDB
+#####5b setup mongoDB
 
 `$ brew install mongodb`
 
 `$ mongod` starts mongodb
 
 
-#6 Create the model
+#####6 Create the model
 
 create a file in a folder called models
 in the file add the schema for the DB
