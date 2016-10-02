@@ -14,7 +14,11 @@ Learning Express.js
 
 `$ npm install`
 
-`$ nodemon ./server.js localhost 8080`
+`$ mongo`
+
+`$ mongodb` in a new tab
+
+`$ nodemon ./server.js localhost 8080` 
 
 ###NOTES
 
