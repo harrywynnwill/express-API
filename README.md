@@ -16,9 +16,9 @@ Learning Express.js
 
 `$ mongo`
 
-`$ mongodb` in a new tab
+`$ mongod` in a new tab
 
-`$ nodemon ./server.js localhost 8080` 
+`$ nodemon ./server.js localhost 8080`
 
 ###NOTES
 
