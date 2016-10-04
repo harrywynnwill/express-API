@@ -35,7 +35,7 @@ var mongoose = require('mongoose');
 
 var Car = require('./app/models/car.js');
 
-mongoose.connect('mongodb://heroku_qcts42fk:87bp7j7sukshcjjai1fu60r16f@ds049486.mlab.com:49486/heroku_qcts42fk'); // connect to our database
+mongoose.connect(MONGODB_URI); // connect to our database
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

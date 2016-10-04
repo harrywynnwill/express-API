@@ -2,7 +2,7 @@
 #Express api
 
 
-Interact with the restful api here https://car-restful-api.herokuapp.com/api using Postman!
+Interact with the restful api here https://car-restful-api.herokuapp.com/api/cars using Postman!
 
 Learning Express.js
 
